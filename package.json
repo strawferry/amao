@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "author": "ferryvip <ferryvip@163.com>",
+  "scripts": {
+    "dev": "umi dev",
+    "build": "umi build",
+    "postinstall": "umi setup",
+    "setup": "umi setup",
+    "start": "npm run dev"
+  },
+  "dependencies": {
+    "antd-mobile": "^5.28.1",
+    "copy-text-to-clipboard": "^3.0.1",
+    "umi": "^4.0.53"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "typescript": "^4.1.2"
+  }
+}
