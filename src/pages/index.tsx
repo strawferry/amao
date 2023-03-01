@@ -31,7 +31,7 @@ const Footer1 = (props: { wechat: any; }) => {
               Modal.clear()
               const aLink = document.createElement("a");
               aLink.className = 'call_up_a_link';
-              aLink.href = "weixin://dl/business/?ticket=l69894d682fa8dbafe724a0ca3950741e";
+              aLink.href = "weixin://";
               aLink.style.cssText = "display:none;width:0px;height:0px;";
               document.body.appendChild(aLink);
               aLink.click();
@@ -74,7 +74,7 @@ const Footer2 = (props: { wechat: any; }) => {
               Modal.clear()
               const aLink = document.createElement("a");
               aLink.className = 'call_up_a_link';
-              aLink.href = "weixin://dl/business/?ticket=l69894d682fa8dbafe724a0ca3950741e";
+              aLink.href = "weixin://";
               aLink.style.cssText = "display:none;width:0px;height:0px;";
               document.body.appendChild(aLink);
               aLink.click();
