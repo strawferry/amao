@@ -85,6 +85,62 @@ const Footer2 = (props: { wechat: any; }) => {
     }}>+ 添加微信</div>
   </div>
 }
+const Footer3 = (props: { wechat: any; }) => {
+  const { wechat } = props
+  const openwin = (url) => {
+    const a = document.createElement("a");
+    a.setAttribute("href", url);
+    a.setAttribute("target", "_blank");
+    a.setAttribute("id", "openwin");
+    document.body.appendChild(a);
+    a.click();
+  }
+  return <div className="footer3">
+    <div className="left">
+      <img className='icon' src="https://jmy-pic.baidu.com/0/pic/1665120158_-1756709_-152209907.png" alt="" srcset="" />
+      <div className="">
+        <div className="">品牌潮鞋</div>
+        <div className="">每日上新！</div>
+      </div>
+    </div>
+    <div className="right">
+      <div className={'wechat'} onClick={() => {
+        openwin('http://f.ferryvip.com:5501')
+      }}>产品相册</div>
+      <div className={'wechat'} onClick={() => {
+        copy(wechat);
+        Modal.show({
+          title: '复制成功',
+          showCloseButton: true,
+          content: (
+            <div style={{ textAlign: 'center' }}>
+              <div>微信号: {wechat}</div>
+              <div>
+                添加微信好友，详细了解产品
+              </div>
+            </div>
+          ),
+          actions: [
+            {
+              key: 'online',
+              text: '立即前往微信加好友',
+              primary: true,
+              onClick: () => {
+                Modal.clear()
+                const aLink = document.createElement("a");
+                aLink.className = 'call_up_a_link';
+                aLink.href = "weixin://";
+                aLink.style.cssText = "display:none;width:0px;height:0px;";
+                document.body.appendChild(aLink);
+                aLink.click();
+              }
+            },
+          ]
+        })
+      }}>+ 添加微信</div>
+    </div>
+  </div>
+}
 export default function HomePage() {
   const [wechat, setWechat] = useState('XZcx23168')
   const [showSip] = useState(true)
@@ -130,7 +186,7 @@ export default function HomePage() {
         }
       })}
       {showSip && <div className="bottom"></div>}
-      <Footer2 wechat={wechat} />
+      <Footer3 wechat={wechat} />
     </div>
   );
 }
