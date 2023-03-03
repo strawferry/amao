@@ -186,7 +186,7 @@ export default function HomePage() {
         }
       })}
       {showSip && <div className="bottom"></div>}
-      <Footer3 wechat={wechat} />
+      <Footer2 wechat={wechat} />
     </div>
   );
 }
