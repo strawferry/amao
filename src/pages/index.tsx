@@ -6,6 +6,12 @@ import copy from 'copy-text-to-clipboard';
 import cjhy from '@/assets/img/cjhy.jpg';
 import pfdl from '@/assets/img/pfdl.jpg';
 import swiper1 from '@/assets/img/swiper1.png';
+import pro1 from '@/assets/img/pro1.png';
+import pro2 from '@/assets/img/pro2.png';
+import pro3 from '@/assets/img/pro3.png';
+import pro4 from '@/assets/img/pro4.png';
+import pro5 from '@/assets/img/pro5.png';
+import pro6 from '@/assets/img/pro6.png';
 
 const Header = () => {
   return <div className="header">
@@ -138,12 +144,19 @@ export default function HomePage() {
           }}>名鞋展示</Divider>
         </div>
         <div className="fwp">
-          {[1, 2, 3].map((it, i) => {
+          {[
+            { title: '运动鞋系列', img: pro1 },
+            { title: '情侣鞋系列', img: pro2 },
+            { title: '篮球鞋系列', img: pro3 },
+            { title: '跑步系列', img: pro4 },
+            { title: '休闲鞋系列', img: pro5 },
+            { title: '帆布鞋系列', img: pro6 },
+          ].map((it, i) => {
             return <div className="bg" key={i}
               onClick={modal}
             >
-              <div className="title">运动鞋系列</div>
-              <img className='xz' src="https://jdtrz.com//m/skin/images/pro2.png" alt="情侣鞋系列" />
+              <div className="title">{it.title}</div>
+              <img className='xz' src={it.img} alt={it.title} />
             </div>
           })}
         </div>
